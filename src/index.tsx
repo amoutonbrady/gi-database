@@ -1,9 +1,23 @@
-import { Component, createSignal } from "solid-js";
+import { Component, createSignal, Switch } from "solid-js";
 import { render } from "solid-js/dom";
+import { Route, RouterProvider } from "@amoutonbrady/solid-tiny-router";
+import Home from "./views/home";
+import ProductDetails from "./views/details";
 
 const App: Component = () => {
-  const [count, setCount] = createSignal(0);
-  return <button onClick={() => setCount(count() + 1)}>{count()}</button>;
+  return (
+    <Switch>
+      <Route path="/:id" children={<ProductDetails />} />
+      <Route path="/" children={<Home />} />
+    </Switch>
+  );
 };
 
-render(() => App, document.getElementById("app"));
+render(
+  () => (
+    <RouterProvider>
+      <App />
+    </RouterProvider>
+  ),
+  document.getElementById("app")
+);
