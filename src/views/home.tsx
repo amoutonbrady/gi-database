@@ -85,7 +85,11 @@ const Home: Component = () => {
           </button>
 
           <div>
+            <label for="page" class="sr-only">
+              Choisir une page
+            </label>
             <input
+              id="page"
               type="number"
               value={pagination.page + 1}
               onInput={(e) => setPagination("page", +e.target.value - 1)}

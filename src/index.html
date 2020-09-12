@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indice Glycémique</title>
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./assets/favicon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#b4c6fc" />
     <meta
       name="description"
       content="Simple indicateur d'indice glycémique des produits du quotidien"
@@ -13,6 +15,12 @@
     <link rel="stylesheet" href="./tailwind.css" />
   </head>
   <body>
+    <noscript>
+      <h1 class="fixed left-0 w-full text-2xl text-center top-1/2">
+        Javascript est nécessaire pour que ce site fonctionne
+      </h1>
+    </noscript>
+
     <div
       id="app"
       class="min-h-screen bg-gradient-to-tr from-purple-300 to-indigo-300"
