@@ -40,9 +40,19 @@ const Home: Component = () => {
   });
 
   return (
-    <Suspense fallback={<p>Chargement des données...</p>}>
+    <Suspense
+      fallback={
+        <p class="fixed top-1/2 left-0 w-full text-center animate-pulse text-3xl text-white">
+          Chargement des données...
+        </p>
+      }
+    >
       <header class="container mx-auto px-4 md:px-8 flex sticky top-4">
+        <label for="search" class="sr-only">
+          Recherher un produit
+        </label>
         <input
+          id="search"
           type="search"
           value={search()}
           onInput={(e) => setSearch(e.target.value)}
@@ -52,13 +62,13 @@ const Home: Component = () => {
         />
       </header>
 
-      <ul class="grid gap-4 md:gap-8 p-4 md:p-8 container mx-auto md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8 mb-12">
+      <main class="grid gap-4 md:gap-8 p-4 md:p-8 container mx-auto md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8 mb-12">
         <For each={pagination.data}>
           {(product) => (
             <ProductCard name={product.translations.fr} gi={product.gi} />
           )}
         </For>
-      </ul>
+      </main>
 
       <footer
         class="bottom-0 left-0 right-0 bg-gray-100 bg-opacity-50 fixed"

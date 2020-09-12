@@ -1,0 +1,16 @@
+{
+  "dir": "ltr",
+  "lang": "fr",
+  "name": "IG Bas",
+  "short_name": "IG Bas",
+  "scope": "/",
+  "display": "browser",
+  "start_url": "https://ig.amoutonbrady.dev/",
+  "background_color": "transparent",
+  "theme_color": "transparent",
+  "description": "Simple indicateur d'indice glycémique des produits du quotidien",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "icons": [],
+  "url": "https://ig.amoutonbrady.dev/"
+}
