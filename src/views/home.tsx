@@ -20,16 +20,7 @@ const Home: Component = () => {
   });
   load(() => import("../final_data.json"));
 
-  createEffect(() => {
-    setFiltered(data());
-    console.log([
-      ...new Set(
-        data()
-          .map(({ gi }) => +gi)
-          .sort((a, b) => a - b)
-      ),
-    ]);
-  });
+  createEffect(() => setFiltered(data()));
   createEffect(() => setPagination({ page: 0, data: filtered() }));
   createEffect(() =>
     setFiltered(
