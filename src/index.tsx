@@ -4,6 +4,7 @@ import { Route, RouterProvider } from "@amoutonbrady/solid-tiny-router";
 import Home from "./views/home";
 import ProductDetails from "./views/details";
 import { register } from "register-service-worker";
+import { ProductsProvider } from "./services";
 
 const App: Component = () => {
   return (
@@ -16,9 +17,11 @@ const App: Component = () => {
 
 render(
   () => (
-    <RouterProvider>
-      <App />
-    </RouterProvider>
+    <ProductsProvider>
+      <RouterProvider>
+        <App />
+      </RouterProvider>
+    </ProductsProvider>
   ),
   document.getElementById("app")
 );

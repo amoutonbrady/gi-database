@@ -7,13 +7,13 @@
     "build": "parcel build src/index.html && cpy 'src/assets/favicon.png' dist --rename=icon.png && workbox generateSW workbox-config.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.4",
+    "@babel/core": "^7.11.6",
     "@babel/preset-typescript": "^7.10.4",
     "@babel/types": "^7.11.5",
     "@parcel/config-default": "nightly",
     "@types/node": "^14.10.1",
     "autoprefixer": "^9.8.6",
-    "babel-preset-solid": "^0.19.0",
+    "babel-preset-solid": "^0.19.3",
     "cpy-cli": "^3.1.1",
     "parcel": "nightly",
     "tailwindcss": "^1.8.8",
@@ -21,8 +21,9 @@
     "workbox-cli": "^5.1.4"
   },
   "dependencies": {
-    "@amoutonbrady/solid-tiny-router": "^0.3.3",
+    "@amoutonbrady/solid-debug": "^0.0.1",
+    "@amoutonbrady/solid-tiny-router": "^0.3.4",
     "register-service-worker": "^1.7.1",
-    "solid-js": "^0.19.1"
+    "solid-js": "^0.19.3"
   }
 }

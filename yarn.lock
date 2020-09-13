@@ -5,16 +5,27 @@ __metadata:
   version: 4
   cacheKey: 6
 
-"@amoutonbrady/solid-tiny-router@npm:^0.3.3":
-  version: 0.3.3
-  resolution: "@amoutonbrady/solid-tiny-router@npm:0.3.3"
+"@amoutonbrady/solid-debug@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@amoutonbrady/solid-debug@npm:0.0.1"
+  dependencies:
+    solid-js: ^0.19.2
+  peerDependencies:
+    solid-js: ^0.19.1
+  checksum: 2cbb7a7192362eacf0217d56ddec722dcc70ab6f86877502360e36813535f3d368b7dff672a5fdba4cdc10c8f61f05e3ae1541eba5de916686a2975491830334
+  languageName: node
+  linkType: hard
+
+"@amoutonbrady/solid-tiny-router@npm:^0.3.4":
+  version: 0.3.4
+  resolution: "@amoutonbrady/solid-tiny-router@npm:0.3.4"
   dependencies:
     mitt: ^2.1.0
     regexparam: ^1.3.0
-    solid-js: ^0.19.1
+    solid-js: ^0.19.3
   peerDependencies:
-    solid-js: ^0.19.1
-  checksum: b2eefe9e6d14e18950544ba2f6ec6c3dd3eb30f2c00f12799856747bd7f6a5c953610fe2e22f0ac45c66d611a4a8ea25b85f226d844bbf885e2752bd85d9fdb4
+    solid-js: ^0.19
+  checksum: b5bdb2f5e04c8a566c0a2707a8f81591a6c88a7ca9e597997952ed4929a849cd8d2721be5fc9198d435e29e9b4b246c1a1e4c48b31e1e1ea96119cf02533b5ea
   languageName: node
   linkType: hard
 
@@ -38,7 +49,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.0.0, @babel/core@npm:^7.11.4, @babel/core@npm:^7.8.4":
+"@babel/core@npm:^7.0.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.8.4":
   version: 7.11.6
   resolution: "@babel/core@npm:7.11.6"
   dependencies:
@@ -3065,7 +3076,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-solid@npm:^0.19.0":
+"babel-preset-solid@npm:^0.19.3":
   version: 0.19.3
   resolution: "babel-preset-solid@npm:0.19.3"
   dependencies:
@@ -8059,18 +8070,19 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "parcel2-solid-starter@workspace:."
   dependencies:
-    "@amoutonbrady/solid-tiny-router": ^0.3.3
-    "@babel/core": ^7.11.4
+    "@amoutonbrady/solid-debug": ^0.0.1
+    "@amoutonbrady/solid-tiny-router": ^0.3.4
+    "@babel/core": ^7.11.6
     "@babel/preset-typescript": ^7.10.4
     "@babel/types": ^7.11.5
     "@parcel/config-default": nightly
     "@types/node": ^14.10.1
     autoprefixer: ^9.8.6
-    babel-preset-solid: ^0.19.0
+    babel-preset-solid: ^0.19.3
     cpy-cli: ^3.1.1
     parcel: nightly
     register-service-worker: ^1.7.1
-    solid-js: ^0.19.1
+    solid-js: ^0.19.3
     tailwindcss: ^1.8.8
     typescript: ^4.0.2
     workbox-cli: ^5.1.4
@@ -9772,7 +9784,7 @@ parcel@nightly:
   languageName: node
   linkType: hard
 
-"solid-js@npm:^0.19.1":
+"solid-js@npm:^0.19.2, solid-js@npm:^0.19.3":
   version: 0.19.3
   resolution: "solid-js@npm:0.19.3"
   checksum: 12e5bfbb5d2b01ab343f402d466b9cb5f913596cf86649b37d29a2b0343d021914a5ec7d67fbd1838ec6bbc5b818d020a4fd4c02fbb2fde3675225fb55366bc4
@@ -9974,7 +9986,7 @@ parcel@nightly:
   languageName: node
   linkType: hard
 
-"string-width@npm:^1.0.1, string-width@npm:^1.0.2 || 2":
+"string-width@npm:^1.0.1":
   version: 1.0.2
   resolution: "string-width@npm:1.0.2"
   dependencies:
@@ -9985,7 +9997,7 @@ parcel@nightly:
   languageName: node
   linkType: hard
 
-"string-width@npm:^2.1.0, string-width@npm:^2.1.1":
+"string-width@npm:^1.0.2 || 2, string-width@npm:^2.1.0, string-width@npm:^2.1.1":
   version: 2.1.1
   resolution: "string-width@npm:2.1.1"
   dependencies:

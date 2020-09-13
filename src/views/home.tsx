@@ -1,41 +1,36 @@
+import { useRouter } from "@amoutonbrady/solid-tiny-router";
 import {
   Component,
   createEffect,
-  createResource,
   createSignal,
   createState,
   For,
   Suspense,
 } from "solid-js";
 import { ProductCard } from "../components/product";
+import { useProducts } from "../services";
 
 const Home: Component = () => {
-  const [data, load] = createResource([]);
+  const [_, { push }] = useRouter();
+  const [products, { find }] = useProducts();
   const [search, setSearch] = createSignal("");
-  const [filtered, setFiltered] = createSignal(data());
   const [pagination, setPagination] = createState({
     perPage: 50,
     page: 0,
     data: [],
+    total: 0,
+    get pageNumber(): number {
+      return Math.ceil(pagination.total / pagination.perPage);
+    },
   });
-  load(() => import("../final_data.json"));
 
-  createEffect(() => setFiltered(data()));
-  createEffect(() => setPagination({ page: 0, data: filtered() }));
-  createEffect(() =>
-    setFiltered(
-      data().filter((row) =>
-        row.translations.fr.includes(search().toLowerCase())
-      )
-    )
-  );
-  createEffect(() => {
-    const newArray = filtered().slice(
-      pagination.page * pagination.perPage,
-      pagination.page * pagination.perPage + pagination.perPage
-    );
-
-    setPagination({ data: newArray });
+  createEffect(async () => {
+    const [data, total] = await find({
+      limit: pagination.perPage,
+      offset: pagination.page * pagination.perPage,
+      name: search(),
+    });
+    setPagination({ data, total });
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
@@ -47,7 +42,7 @@ const Home: Component = () => {
         </p>
       }
     >
-      <header class="container mx-auto px-4 md:px-8 flex sticky top-4">
+      <header class="container mx-auto px-4 md:px-8 flex sticky top-4 z-20">
         <label for="search" class="sr-only">
           Recherher un produit
         </label>
@@ -58,14 +53,18 @@ const Home: Component = () => {
           onInput={(e) => setSearch(e.target.value)}
           class="flex-1 px-4 md:px-8 py-4 rounded-lg shadow text-center bg-gray-100 bg-opacity-50 focus:bg-opacity-100"
           style={{ "backdrop-filter": "blur(5px)" }}
-          placeholder={`Je cherche parmis ${data().length} produit...`}
+          placeholder={`Je cherche parmis ${products().length} produit...`}
         />
       </header>
 
       <main class="grid gap-4 md:gap-8 p-4 md:p-8 container mx-auto md:grid-cols-2 lg:grid-cols-3 mt-4 md:mt-8 mb-12">
         <For each={pagination.data}>
           {(product) => (
-            <ProductCard name={product.translations.fr} gi={product.gi} />
+            <ProductCard
+              id={product.id}
+              name={product.translations.fr}
+              gi={product.gi}
+            />
           )}
         </For>
       </main>
@@ -96,7 +95,7 @@ const Home: Component = () => {
               class="bg-transparent w-12"
             />
             <span>&nbsp;/&nbsp;</span>
-            <span>{Math.ceil(filtered().length / pagination.perPage)}</span>
+            <span>{pagination.pageNumber}</span>
           </div>
 
           <button

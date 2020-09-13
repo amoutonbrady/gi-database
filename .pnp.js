@@ -37,7 +37,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@amoutonbrady/solid-tiny-router", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.3"],
+            ["@amoutonbrady/solid-debug", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.0.1"],
+            ["@amoutonbrady/solid-tiny-router", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.4"],
             ["@babel/core", "npm:7.11.6"],
             ["@babel/preset-typescript", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:7.10.4"],
             ["@babel/types", "npm:7.11.5"],
@@ -56,11 +57,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
-      ["@amoutonbrady/solid-tiny-router", [
-        ["virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.3", {
-          "packageLocation": "./.yarn/$$virtual/@amoutonbrady-solid-tiny-router-virtual-a29a661a78/0/cache/@amoutonbrady-solid-tiny-router-npm-0.3.3-38a66b9aa4-b2eefe9e6d.zip/node_modules/@amoutonbrady/solid-tiny-router/",
+      ["@amoutonbrady/solid-debug", [
+        ["virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.0.1", {
+          "packageLocation": "./.yarn/$$virtual/@amoutonbrady-solid-debug-virtual-100cac8755/0/cache/@amoutonbrady-solid-debug-npm-0.0.1-1ba43b0065-2cbb7a7192.zip/node_modules/@amoutonbrady/solid-debug/",
           "packageDependencies": [
-            ["@amoutonbrady/solid-tiny-router", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.3"],
+            ["@amoutonbrady/solid-debug", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.0.1"],
+            ["@types/solid-js", null],
+            ["solid-js", "npm:0.19.3"]
+          ],
+          "packagePeers": [
+            "@types/solid-js",
+            "solid-js"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@amoutonbrady/solid-tiny-router", [
+        ["virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.4", {
+          "packageLocation": "./.yarn/$$virtual/@amoutonbrady-solid-tiny-router-virtual-f7aaa07de5/0/cache/@amoutonbrady-solid-tiny-router-npm-0.3.4-df4a6638fb-b5bdb2f5e0.zip/node_modules/@amoutonbrady/solid-tiny-router/",
+          "packageDependencies": [
+            ["@amoutonbrady/solid-tiny-router", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.4"],
             ["@types/solid-js", null],
             ["mitt", "npm:2.1.0"],
             ["regexparam", "npm:1.3.0"],
@@ -9655,7 +9671,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["parcel2-solid-starter", "workspace:."],
-            ["@amoutonbrady/solid-tiny-router", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.3"],
+            ["@amoutonbrady/solid-debug", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.0.1"],
+            ["@amoutonbrady/solid-tiny-router", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:0.3.4"],
             ["@babel/core", "npm:7.11.6"],
             ["@babel/preset-typescript", "virtual:bb17d83990d687790d6384e46b41060316e25f26c85db0fe5e29cfeba8af1957f9aa779dbd4714408d5d029dccabae51b29c4cb92b632e2eebc60c281024cf2c#npm:7.10.4"],
             ["@babel/types", "npm:7.11.5"],
@@ -12804,7 +12821,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/wide-align-npm-1.1.3-48c7d4953c-4f850f84da.zip/node_modules/wide-align/",
           "packageDependencies": [
             ["wide-align", "npm:1.1.3"],
-            ["string-width", "npm:1.0.2"]
+            ["string-width", "npm:2.1.1"]
           ],
           "linkType": "HARD",
         }]
