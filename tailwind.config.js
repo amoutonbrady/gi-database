@@ -1,10 +1,10 @@
 module.exports = {
-  purge: false,
-  // purge: {
-  //   mode: "layers",
-  //   layers: ["utilities"],
-  //   content: ["./src/index.html", "./src/**/*.tsx"],
-  // },
+  // purge: false,
+  purge: {
+    mode: "layers",
+    layers: ["utilities"],
+    content: ["./src/index.html", "./src/**/*.tsx"],
+  },
   theme: {
     extend: {
       animation: {
